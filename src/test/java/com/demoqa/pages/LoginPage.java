@@ -21,7 +21,6 @@ public class LoginPage {
             logoutButton = $("#submit"),
             errorMessage = $("#output");
 
-
     public LoginPage openLoginPage() {
         open(baseUrl + loginPagePath);
         return this;

@@ -1,5 +1,4 @@
 package com.demoqa.tests;
-
 public class TestData {
     public static String
             unauthGreeting = "Welcome,\nLogin in Book Store",
