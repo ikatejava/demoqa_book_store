@@ -29,7 +29,6 @@ public class LoginPageTests extends TestBase {
             loginPage.clickLogoutButton();
         });
     }
-
     @Test
     @Tag("login")
     @DisplayName("Unsuccessful authorization in DEMOQA Book Store with wrong username")
@@ -47,7 +46,6 @@ public class LoginPageTests extends TestBase {
             loginPage.checkErrorMessage(invalidDataMessage);
         });
     }
-
     @Test
     @Tag("login")
     @DisplayName("Unsuccessful authorization in DEMOQA Book Store with wrong password")

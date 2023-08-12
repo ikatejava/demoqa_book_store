@@ -10,7 +10,6 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class BooksPage {
     String booksPagePath = "books";
-
     SelenideElement
             bookStoreTextInTheHeader = $(".main-header"),
             loginButton = $("#login"),
@@ -30,7 +29,6 @@ public class BooksPage {
             bookNumberOfPages = $("#pages-wrapper"),
             bookDescription = $("#description-wrapper"),
             bookWebsiteLink = $("#website-wrapper");
-
 
     public BooksPage openBooksPage() {
         open(baseUrl + booksPagePath);

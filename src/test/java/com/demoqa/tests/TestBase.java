@@ -18,7 +18,6 @@ import java.util.Map;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
-
     static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
 
     LoginPage loginPage = new LoginPage();
@@ -36,13 +35,11 @@ public class TestBase {
             Configuration.remote = config.remoteUrl();
         }
 
-
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true
         ));
-
         Configuration.browserCapabilities = capabilities;
     }
 
