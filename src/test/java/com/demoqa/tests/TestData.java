@@ -5,7 +5,7 @@ public class TestData {
             login = "kate_belova",
             wrongLogin = "katebelova",
             password = "$B00k_1over$",
-            wrongPassword = "$B00k1over$",
+            wrongPassword = "$B00k-1over$",
             invalidDataMessage = "Invalid username or password!",
             gitPocketGuideTitle = "Git Pocket Guide",
             gitPocketGuideISBN = "9781449325862",
