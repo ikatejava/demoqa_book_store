@@ -164,9 +164,7 @@ ____
 > ## <img src="media/logos/Jira.svg" title="Jira" width="4%"/> </a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-848">Jira</a>
 
 <p align="center">  
-<img title="Jira" src="media/screens/jira_plus_allure_to.png" width="850">  
-</p>
-
+<img title="Jira" src="media/screens/jira_plus_allure_to.png" width="850"> 
 </p>
 
 ____
@@ -191,5 +189,4 @@ ____
 К каждому тесту в отчете прилагается видео его выполнения.
 <p align="center">
 <img title="Selenoid Video" src="media/videos/check_book_info.gif" width="750" height="450" alt="video">
-
 </p>
