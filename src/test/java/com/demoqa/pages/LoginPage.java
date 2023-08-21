@@ -22,7 +22,7 @@ public class LoginPage {
             errorMessage = $("#output");
 
     public LoginPage openLoginPage() {
-        open(baseUrl + loginPagePath);
+        open(loginPagePath);
         return this;
     }
 

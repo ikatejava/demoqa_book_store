@@ -31,7 +31,7 @@ public class BooksPage {
             bookWebsiteLink = $("#website-wrapper");
 
     public BooksPage openBooksPage() {
-        open(baseUrl + booksPagePath);
+        open(booksPagePath);
         return this;
     }
 
