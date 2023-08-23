@@ -10,6 +10,7 @@ import static io.qameta.allure.Allure.step;
 public class LoginPageTests extends TestBase {
     @Test
     @Tag("login")
+    @Tag("positive")
     @DisplayName("Successful authorization in DEMOQA Book Store")
     void successfulAuthorization() {
         step("Open DEMOQA Book Store Login page", () -> {
@@ -29,8 +30,10 @@ public class LoginPageTests extends TestBase {
             loginPage.clickLogoutButton();
         });
     }
+
     @Test
     @Tag("login")
+    @Tag("negative")
     @DisplayName("Unsuccessful authorization in DEMOQA Book Store with wrong username")
     void authorizationWithWrongUserName() {
         step("Open DEMOQA Book Store Login page", () -> {
@@ -46,8 +49,10 @@ public class LoginPageTests extends TestBase {
             loginPage.checkErrorMessage(invalidDataMessage);
         });
     }
+
     @Test
     @Tag("login")
+    @Tag("negative")
     @DisplayName("Unsuccessful authorization in DEMOQA Book Store with wrong password")
     void authorizationWithWrongPassword() {
         step("Open DEMOQA Book Store Login page", () -> {

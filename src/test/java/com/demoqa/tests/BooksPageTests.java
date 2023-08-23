@@ -10,6 +10,7 @@ import static io.qameta.allure.Allure.step;
 public class BooksPageTests extends TestBase {
     @Test
     @Tag("books")
+    @Tag("positive")
     @DisplayName("Check presence of books in DEMOQA Book Store")
     void checkPresenceOfBooks() {
         step("Open DEMOQA Book Store Books page", () -> {
@@ -36,8 +37,10 @@ public class BooksPageTests extends TestBase {
             loginPage.clickLogoutButton();
         });
     }
+
     @Test
     @Tag("books")
+    @Tag("positive")
     @DisplayName("Check chosen book info")
     void checkBookInfo() {
         step("Open DEMOQA Book Store Books page", () -> {
