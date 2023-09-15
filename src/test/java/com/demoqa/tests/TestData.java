@@ -1,8 +1,10 @@
 package com.demoqa.tests;
 public class TestData {
     public static String
-            unauthGreeting = "Welcome,\nLogin in Book Store",
+            unauthGreeting1 = "Welcome,",
+            unauthGreeting2 = "Login in Book Store",
 
+            userNameText = "User Name : ",
             login = "kate_belova",
             wrongLogin = "katebelova",
             password = "$B00k_1over$",

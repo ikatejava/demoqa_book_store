@@ -4,7 +4,6 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.interactable;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -22,7 +21,7 @@ public class BooksPage {
             eloquentJS = $("a[href='/books?book=9781593275846']"),
             understandingECMAScript6 = $("a[href='/books?book=9781593277574']"),
             bookISBN = $("#ISBN-wrapper"),
-            bookTitle = $("#userName-value"),
+            bookTitle = $("#title-wrapper").$("#userName-value"),
             bookSubTitle = $("#subtitle-wrapper"),
             bookAuthor = $("#author-wrapper"),
             bookPublisher = $("#publisher-wrapper"),
@@ -35,132 +34,127 @@ public class BooksPage {
         return this;
     }
 
-    public BooksPage checkBookStoreText() {
+    public void checkBookStoreText() {
         bookStoreTextInTheHeader.shouldHave(text("Book Store"));
-        return this;
     }
 
-    public BooksPage clickLoginButton() {
+    public void clickLoginButton() {
         loginButton.click();
-        return this;
     }
 
     public BooksPage checkGitPocketGuideBook(String gitPocketGuideTitle) {
+        gitPocketGuide.shouldHave(text(gitPocketGuideTitle));
         String gitPocketGuideName = gitPocketGuide.getText();
-        gitPocketGuideName.equals(gitPocketGuideTitle);
         System.out.println(gitPocketGuideName);
         return this;
     }
 
     public BooksPage checkLearningJSDesignPatternsBook(String learningJSDesignPatternsTitle) {
+        learningJSDesignPatterns.shouldHave(text(learningJSDesignPatternsTitle));
         String learningJSDesignPatternsName = learningJSDesignPatterns.getText();
-        learningJSDesignPatternsName.equals(learningJSDesignPatternsTitle);
         System.out.println(learningJSDesignPatternsName);
         return this;
     }
 
     public BooksPage checkDesigningWebAPIsBook(String designingWebAPIsTitle) {
+        designingWebAPIs.shouldHave(text(designingWebAPIsTitle));
         String designingWebAPIsName = designingWebAPIs.getText();
-        designingWebAPIsName.equals(designingWebAPIsTitle);
         System.out.println(designingWebAPIsName);
         return this;
     }
 
     public BooksPage checkSpeakingJSBook(String speakingJSTitle) {
+        speakingJS.shouldHave(text(speakingJSTitle));
         String speakingJSName = speakingJS.getText();
-        speakingJSName.equals(speakingJSTitle);
         System.out.println(speakingJSName);
         return this;
     }
 
     public BooksPage checkYouDontKnowJSbook(String youDontKnowJSTitle) {
+        youDontKnowJS.shouldHave(text(youDontKnowJSTitle));
         String youDontKnowJSName = youDontKnowJS.getText();
-        youDontKnowJSName.equals(youDontKnowJSTitle);
         System.out.println(youDontKnowJSName);
         return this;
     }
 
     public BooksPage checkProgrammingJSApplicationsBook(String programmingJSApplicationsTitle) {
+        programmingJSApplications.shouldHave(text(programmingJSApplicationsTitle));
         String programmingJSApplicationsName = programmingJSApplications.getText();
-        programmingJSApplicationsName.equals(programmingJSApplicationsTitle);
         System.out.println(programmingJSApplicationsName);
         return this;
     }
 
     public BooksPage checkEloquentJSBook(String eloquentJSTitle) {
+        eloquentJS.shouldHave(text(eloquentJSTitle));
         String eloquentJSName = eloquentJS.getText();
-        eloquentJSName.equals(eloquentJSTitle);
         System.out.println(eloquentJSName);
         return this;
     }
 
-    public BooksPage checkUnderstandingECMAScript6Book(String understandingECMAScript6Title) {
+    public void checkUnderstandingECMAScript6Book(String understandingECMAScript6Title) {
+        understandingECMAScript6.shouldHave(text(understandingECMAScript6Title));
         String understandingECMAScript6Name = understandingECMAScript6.getText();
-        understandingECMAScript6Name.equals(understandingECMAScript6Title);
         System.out.println(understandingECMAScript6Name);
-        return this;
     }
 
-    public BooksPage clickGitPocketGuideBookLink() {
+    public void clickGitPocketGuideBookLink() {
         gitPocketGuide.shouldBe(interactable);
         gitPocketGuide.click();
-        return this;
     }
 
     public BooksPage checkISBN(String isbn) {
+        bookISBN.shouldHave(text(isbn));
         String chosenBookISBN = bookISBN.getText();
-        chosenBookISBN.equals(isbn);
         System.out.println(chosenBookISBN);
         return this;
     }
 
     public BooksPage checkTitle(String title) {
+        bookTitle.shouldHave(text(title));
         String chosenBookTitle = bookTitle.getText();
-        chosenBookTitle.equals(title);
         System.out.println(chosenBookTitle);
         return this;
     }
 
     public BooksPage checkSubTitle(String subTitle) {
+        bookSubTitle.shouldHave(text(subTitle));
         String chosenBookSubTitle = bookSubTitle.getText();
-        chosenBookSubTitle.equals(subTitle);
         System.out.println(chosenBookSubTitle);
         return this;
     }
 
     public BooksPage checkAuthor(String author) {
+        bookAuthor.shouldHave(text(author));
         String chosenBookAuthor = bookAuthor.getText();
-        chosenBookAuthor.equals(author);
         System.out.println(chosenBookAuthor);
         return this;
     }
 
     public BooksPage checkPublisher(String publisher) {
+        bookPublisher.shouldHave(text(publisher));
         String chosenBookPublisher = bookPublisher.getText();
-        chosenBookPublisher.equals(publisher);
         System.out.println(chosenBookPublisher);
         return this;
     }
 
     public BooksPage checkNumberOfPages(int numberOfPages) {
+        bookNumberOfPages.shouldHave(text(String.valueOf(numberOfPages)));
         String chosenBookNumberOfPages = bookNumberOfPages.getText();
-        chosenBookNumberOfPages.equals(numberOfPages);
         System.out.println(chosenBookNumberOfPages);
         return this;
     }
 
     public BooksPage checkDescription(String description) {
+        bookDescription.shouldHave(text(description));
         String chosenBookDescription = bookDescription.getText();
-        chosenBookDescription.equals(description);
         System.out.println(chosenBookDescription);
         return this;
     }
 
-    public BooksPage checkWebsiteLink(String websiteLink) {
+    public void checkWebsiteLink(String websiteLink) {
         bookWebsiteLink.shouldBe(interactable);
+        bookWebsiteLink.shouldHave(text(websiteLink));
         String chosenBookWebsiteLink = bookWebsiteLink.getText();
-        chosenBookWebsiteLink.equals(websiteLink);
         System.out.println(chosenBookWebsiteLink);
-        return this;
     }
 }

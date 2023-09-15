@@ -3,7 +3,6 @@ package com.demoqa.pages;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -26,11 +25,11 @@ public class LoginPage {
         return this;
     }
 
-    public LoginPage checkGreetingUnauthorized(String unauthGreeting) {
+    public void checkGreetingUnauthorized(String unauthGreeting1, String unauthGreeting2) {
+        greetingUnathorized1.shouldHave(text(unauthGreeting1));
+        greetingUnathorized2.shouldHave(text(unauthGreeting2));
         String unauthorizedUserGreeting = greetingUnathorized1.getText() + greetingUnathorized2.getText();
-        unauthorizedUserGreeting.equals(unauthGreeting);
         System.out.println(unauthorizedUserGreeting);
-        return this;
     }
 
     public LoginPage inputUserName(String login) {
@@ -43,9 +42,8 @@ public class LoginPage {
         return this;
     }
 
-    public LoginPage clickLoginButton() {
+    public void clickLoginButton() {
         loginButton.click();
-        return this;
     }
 
     public LoginPage checkMainHeader() {
@@ -53,22 +51,20 @@ public class LoginPage {
         return this;
     }
 
-    public LoginPage checkAuthorizedUserName(String login) {
+    public void checkAuthorizedUserName(String userName, String login) {
+        userNameText.shouldHave(text(String.valueOf(userName)));
+        userNameValue.shouldHave(text(login));
         String authorizedUserName = userNameText.getText() + " " + userNameValue.getText();
-        authorizedUserName.equals("User Name : " + login);
         System.out.println(authorizedUserName);
-        return this;
     }
 
-    public LoginPage clickLogoutButton() {
+    public void clickLogoutButton() {
         logoutButton.click();
-        return this;
     }
 
-    public LoginPage checkErrorMessage(String invalidDataMessage) {
+    public void checkErrorMessage(String invalidDataMessage) {
+        errorMessage.shouldHave(text(invalidDataMessage));
         String errorMessageText = errorMessage.getText();
-        errorMessageText.equals(invalidDataMessage);
         System.out.println(errorMessageText);
-        return this;
     }
 }

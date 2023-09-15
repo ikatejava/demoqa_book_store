@@ -15,7 +15,7 @@ public class LoginPageTests extends TestBase {
     void successfulAuthorization() {
         step("Open DEMOQA Book Store Login page", () -> {
             loginPage.openLoginPage()
-                    .checkGreetingUnauthorized(unauthGreeting);
+                    .checkGreetingUnauthorized(unauthGreeting1, unauthGreeting2);
         });
         step("Fill out authorization form", () -> {
             loginPage.inputUserName(login)
@@ -24,7 +24,7 @@ public class LoginPageTests extends TestBase {
         });
         step("Check that the user is authorized", () -> {
             loginPage.checkMainHeader()
-                    .checkAuthorizedUserName(login);
+                    .checkAuthorizedUserName(userNameText, login);
         });
         step("Log out", () -> {
             loginPage.clickLogoutButton();
@@ -38,7 +38,7 @@ public class LoginPageTests extends TestBase {
     void authorizationWithWrongUserName() {
         step("Open DEMOQA Book Store Login page", () -> {
             loginPage.openLoginPage()
-                    .checkGreetingUnauthorized(unauthGreeting);
+                    .checkGreetingUnauthorized(unauthGreeting1, unauthGreeting2);
         });
         step("Fill out authorization form", () -> {
             loginPage.inputUserName(wrongLogin)
@@ -57,7 +57,7 @@ public class LoginPageTests extends TestBase {
     void authorizationWithWrongPassword() {
         step("Open DEMOQA Book Store Login page", () -> {
             loginPage.openLoginPage()
-                    .checkGreetingUnauthorized(unauthGreeting);
+                    .checkGreetingUnauthorized(unauthGreeting1, unauthGreeting2);
         });
         step("Fill out authorization form", () -> {
             loginPage.inputUserName(login)
