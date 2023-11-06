@@ -1,6 +1,5 @@
 # Демо-проект по автоматизации тестирования для [<img src="https://demoqa.com/images/Toolsqa.jpg">](https://demoqa.com/books) Book Store
 
-
 > [demoqa.com](https://demoqa.com/) - тренировочная платформа для QA-студентов и инженеров.
 ____
 
@@ -46,7 +45,8 @@ ____
 
 </p>
 
-- В данном проекте автотесты написаны на <code>Java</code> с использованием фреймворков [Selenide](https://selenide.org/) и [JUnit 5](https://junit.org/junit5/).
+- В данном проекте автотесты написаны на <code>Java</code> с использованием
+  фреймворков [Selenide](https://selenide.org/) и [JUnit 5](https://junit.org/junit5/).
 - Для сборки проекта был использован [Gradle](https://gradle.org/).
 - При удаленном запуске тестов браузер запускается в [Selenoid](https://selenoid.autotests.cloud/).
 - Удаленный запуск реализован в [Jenkins](https://jenkins.autotests.cloud/) с формированием <code>Allure</code>-отчета.

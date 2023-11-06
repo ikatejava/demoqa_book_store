@@ -1,18 +1,19 @@
 package com.demoqa.tests;
+
 public class TestData {
     public static String
             unauthGreeting1 = "Welcome,",
             unauthGreeting2 = "Login in Book Store",
 
-            userNameText = "User Name : ",
+    userNameText = "User Name : ",
             login = "kate_belova",
             wrongLogin = "katebelova",
             password = "$B00k_1over$",
             wrongPassword = "$B00k-1over$",
 
-            invalidDataMessage = "Invalid username or password!",
+    invalidDataMessage = "Invalid username or password!",
 
-            gitPocketGuideTitle = "Git Pocket Guide",
+    gitPocketGuideTitle = "Git Pocket Guide",
             gitPocketGuideISBN = "9781449325862",
             gitPocketGuideSubTitle = "A Working Introduction",
             gitPocketGuideAuthor = "Richard E. Silverman",
@@ -22,7 +23,7 @@ public class TestData {
                     "as well as a reference to common commands and procedures for those of you with Git exp",
             gitPocketGuideWebsiteLink = "http://chimera.labs.oreilly.com/books/1230000000561/index.html",
 
-            learningJSDesignPatternsTitle = "Learning JavaScript Design Patterns",
+    learningJSDesignPatternsTitle = "Learning JavaScript Design Patterns",
             designingWebAPIsTitle = "Designing Evolvable Web APIs with ASP.NET",
             speakingJSTitle = "Speaking JavaScript",
             youDontKnowJSTitle = "You Don't Know JS",
