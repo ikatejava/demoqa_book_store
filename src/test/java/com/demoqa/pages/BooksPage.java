@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class BooksPage {
-    String booksPagePath = "books";
+    String booksPagePath = "/books";
     SelenideElement
             bookStoreTextInTheHeader = $(".main-header"),
             loginButton = $("#login"),

@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class LoginPage {
-    String loginPagePath = "login";
+    String loginPagePath = "/login";
     SelenideElement
             greetingUnathorized1 = $("h2"),
             greetingUnathorized2 = $("h5"),
